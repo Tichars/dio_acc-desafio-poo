@@ -6,7 +6,7 @@ public abstract sealed class Conteudo permits Curso, Mentoria {
 
     private final String titulo;
     private final String descricao;
-    public static final double XP_PADRAO = 10d;
+    public static final double XP_PADRAO = 5d;
 
     protected Conteudo(String titulo, String descricao) {
         this.titulo = Objects.requireNonNull(titulo);
@@ -20,7 +20,7 @@ public abstract sealed class Conteudo permits Curso, Mentoria {
 
     @Override
     public String toString() {
-        return "%s[titulo='%s']".formatted(getClass().
+        return "%s[titulo= '%s']".formatted(getClass().
                 getSimpleName(), titulo);
     }
 }
